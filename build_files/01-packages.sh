@@ -44,4 +44,4 @@ pacman -S --noconfirm greetd xwayland-satellite xdg-desktop-portal-kde xdg-deskt
     breeze brightnessctl ddcutil xdg-utils kservice5 archlinux-xdg-menu shared-mime-info kio glycin gnome-themes-extra
 
 # yay deps
-pacman -S --noconfirm fakeroot debugedit go make
+pacman -S --noconfirm fakeroot debugedit go make gcc
