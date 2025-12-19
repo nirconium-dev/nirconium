@@ -62,5 +62,4 @@ systemctl enable polkit.service \
 
 # user
 systemctl --global enable \
-    opentabletdriver.service \
     wl-clip-persist.service
