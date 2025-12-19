@@ -15,7 +15,7 @@ pacman -S --noconfirm noto-fonts noto-fonts-cjk noto-fonts-emoji unicode-emoji n
 
 # cli
 pacman -S --noconfirm sudo bash bash-completion fastfetch btop jq less lsof nano openssh powertop man-db wget yt-dlp \
-    tree usbutils vim wl-clip-persist cliphist unzip ptyxis glibc-locales tar udev starship tuned-ppd tuned hyfetch curl patchelf
+    tree usbutils vim wl-clip-persist cliphist unzip ptyxis glibc-locales tar udev starship tuned-ppd tuned hyfetch curl patchelf git
 
 # containerization
 pacman -S --noconfirm distrobox docker podman
@@ -40,5 +40,16 @@ pacman -S --noconfirm cups cups-browsed hplip
 
 # desktop
 pacman -S --noconfirm greetd xwayland-satellite xdg-desktop-portal-kde xdg-desktop-portal xdg-user-dirs xdg-desktop-portal-gnome \
-    ffmpegthumbs kdegraphics-thumbnailers kdenetwork-filesharing kio-admin matugen accountsservice hyprland hypryou dgop cava dolphin \
+    ffmpegthumbs kdegraphics-thumbnailers kdenetwork-filesharing kio-admin matugen accountsservice hyprland dgop cava dolphin \
     breeze brightnessctl ddcutil xdg-utils kservice5 archlinux-xdg-menu shared-mime-info kio glycin greetd-regreet gnome-themes-extra
+
+# hypryou
+git clone https://github.com/koeqaife/hyprland-material-you
+cd hyprland-material-you
+makepkg -si
+cd greeter
+makepkg -si
+cd ../hypryou-utils
+makepkg -si
+cd ../..
+rm -rf hyprland-material-you
