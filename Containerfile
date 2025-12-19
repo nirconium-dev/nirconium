@@ -26,10 +26,11 @@ RUN --mount=type=bind,from=ctx,source=/,target=/ctx \
     --mount=type=cache,dst=/var/log \
     --mount=type=tmpfs,dst=/tmp \
     sh /ctx/01-packages.sh && \
-    sh /ctx/02-flatpaks.sh && \
-    sh /ctx/03-brew.sh && \
-    sh /ctx/04-systemd.sh && \
-    sh /ctx/05-misc.sh
+    sh /ctx/02-aur-packages.sh && \
+    sh /ctx/03-flatpaks.sh && \
+    sh /ctx/04-brew.sh && \
+    sh /ctx/05-systemd.sh && \
+    sh /ctx/06-misc.sh
 
 # https://github.com/bootc-dev/bootc/issues/1801
 RUN --mount=type=tmpfs,dst=/tmp --mount=type=tmpfs,dst=/root \
@@ -50,15 +51,5 @@ RUN sed -i 's|^HOME=.*|HOME=/var/home|' "/etc/default/useradd" && \
     echo "$(for dir in opt home srv mnt usrlocal ; do echo "d /var/$dir 0755 root root -" ; done)" | tee -a "/usr/lib/tmpfiles.d/bootc-base-dirs.conf" && \
     printf "d /var/roothome 0700 root root -\nd /run/media 0755 root root -" | tee -a "/usr/lib/tmpfiles.d/bootc-base-dirs.conf" && \
     printf '[composefs]\nenabled = yes\n[sysroot]\nreadonly = true\n' | tee "/usr/lib/ostree/prepare-root.conf"
-
-# Setup a temporary root passwd (changeme) for dev purposes
-# RUN pacman -S whois --noconfirm
-# RUN usermod -p "$(echo "changeme" | mkpasswd -s)" root
-
-# begin custom changes
-# GNOME
-RUN pacman -Sy --noconfirm gnome gnome-extra networkmanager && \
-    systemctl enable gdm.service && \
-    systemctl enable NetworkManager.service
 
 RUN bootc container lint

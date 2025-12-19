@@ -41,19 +41,4 @@ pacman -S --noconfirm cups cups-browsed hplip
 # desktop
 pacman -S --noconfirm greetd xwayland-satellite xdg-desktop-portal-kde xdg-desktop-portal xdg-user-dirs xdg-desktop-portal-gnome \
     ffmpegthumbs kdegraphics-thumbnailers kdenetwork-filesharing kio-admin matugen accountsservice hyprland dgop cava dolphin \
-    breeze brightnessctl ddcutil xdg-utils kservice5 archlinux-xdg-menu shared-mime-info kio glycin greetd-regreet gnome-themes-extra
-
-# hypryou
-mkdir -p assets
-cd assets
-
-curl -JLO https://github.com/koeqaife/hyprland-material-you/releases/download/v2.1.11/hypryou-utils-1.0.0-3-x86_64.pkg.tar.zst
-curl -JLO https://github.com/koeqaife/hyprland-material-you/releases/download/v2.1.11/hypryou-greeter-1.0.0-4-any.pkg.tar.zst
-curl -JLO https://github.com/koeqaife/hyprland-material-you/releases/download/v2.1.11/hypryou-2.1.11-1-x86_64.pkg.tar.zst
-
-pacman -U hypryou-utils-1.0.0-3-x86_64.pkg.tar.zst
-pacman -U hypryou-greeter-1.0.0-4-any.pkg.tar.zst
-pacman -U hypryou-2.1.11-1-x86_64.pkg.tar.zst
-
-cd ..
-rm -rf assets
+    breeze brightnessctl ddcutil xdg-utils kservice5 archlinux-xdg-menu shared-mime-info kio glycin gnome-themes-extra
