@@ -1,4 +1,4 @@
-echo "::group:: Install main packages"
+echo "::group::Install main packages"
 
 # init
 pacman -Syu --noconfirm
@@ -20,7 +20,7 @@ pacman -S --noconfirm sudo bash bash-completion fastfetch btop jq less lsof nano
     tree usbutils vim wl-clip-persist cliphist unzip ptyxis glibc-locales tar udev starship tuned-ppd tuned hyfetch curl patchelf git
 
 # containerization
-pacman -S --noconfirm distrobox docker podman
+pacman -S --noconfirm distrobox podman
 
 # drivers
 pacman -S --noconfirm amd-ucode intel-ucode efibootmgr shim mesa libva-intel-driver libva-mesa-driver \
@@ -41,9 +41,9 @@ pacman -S --noconfirm pipewire pipewire-pulse pipewire-zeroconf pipewire-ffado p
 pacman -S --noconfirm cups cups-browsed hplip
 
 # desktop
-pacman -S --noconfirm greetd xwayland-satellite xdg-desktop-portal-kde xdg-desktop-portal xdg-user-dirs xdg-desktop-portal-gnome \
-    ffmpegthumbs kdegraphics-thumbnailers kdenetwork-filesharing kio-admin matugen accountsservice hyprland dgop cava dolphin \
-    breeze brightnessctl ddcutil xdg-utils kservice5 archlinux-xdg-menu shared-mime-info kio glycin gnome-themes-extra
+pacman -S --noconfirm greetd xwayland-satellite xdg-desktop-portal xdg-user-dirs xdg-desktop-portal-gnome \
+    ffmpegthumbs matugen accountsservice hyprland dgop cava nautilus kitty firefox \
+    brightnessctl ddcutil xdg-utils archlinux-xdg-menu shared-mime-info glycin gnome-themes-extra
 
 # yay deps
 pacman -S --noconfirm fakeroot debugedit go make gcc

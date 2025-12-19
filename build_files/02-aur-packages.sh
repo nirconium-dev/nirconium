@@ -1,4 +1,4 @@
-echo "::group:: Install main packages (AUR)"
+echo "::group::Install main packages (AUR)"
 
 # setup user
 useradd -m -G wheel builder
