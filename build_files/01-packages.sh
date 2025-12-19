@@ -44,12 +44,11 @@ pacman -S --noconfirm greetd xwayland-satellite xdg-desktop-portal-kde xdg-deskt
     breeze brightnessctl ddcutil xdg-utils kservice5 archlinux-xdg-menu shared-mime-info kio glycin greetd-regreet gnome-themes-extra
 
 # hypryou
-git clone https://github.com/koeqaife/hyprland-material-you
-cd hyprland-material-you
-makepkg -si
-cd greeter
-makepkg -si
-cd ../hypryou-utils
-makepkg -si
-cd ../..
-rm -rf hyprland-material-you
+mkdir -p assets
+cd assets
+curl -Lo https://github.com/koeqaife/hyprland-material-you/releases/download/v2.1.11/hypryou-utils-1.0.0-3-x86_64.pkg.tar.zst
+curl -Lo https://github.com/koeqaife/hyprland-material-you/releases/download/v2.1.11/hypryou-greeter-1.0.0-4-any.pkg.tar.zst
+curl -Lo https://github.com/koeqaife/hyprland-material-you/releases/download/v2.1.11/hypryou-2.1.11-1-x86_64.pkg.tar.zst
+pacman -U *.pkg.tar.zst
+cd ..
+rm -rf assets

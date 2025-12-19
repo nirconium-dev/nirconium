@@ -19,7 +19,7 @@ StartLimitBurst=3\n\
 [Install]\n\
 WantedBy=multi-user.target' > /usr/lib/systemd/system/flatpak-preinstall.service
 
-RUN echo -e '[Unit]\n\
+echo -e '[Unit]\n\
 Description=Persistent wayland clipboard\n\
 \n\
 [Service]\n\
@@ -30,11 +30,11 @@ WantedBy=default.target' > /usr/lib/systemd/user/wl-clip-persist.service
 
 # This fixes a user/groups error with rebasing from other problematic images.
 # FIXME Do NOT remove until fixed upstream or fixed universally. Updating with new fix also fine. Script created by Tulip.
-RUN mkdir -p /usr/lib/systemd/system-preset /usr/lib/systemd/system
+mkdir -p /usr/lib/systemd/system-preset /usr/lib/systemd/system
 
-RUN echo -e '#!/bin/sh\ncat /usr/lib/sysusers.d/*.conf | grep -e "^g" | grep -v -e "^#" | awk "NF" | awk '\''{print $2}'\'' | grep -v -e "wheel" -e "root" -e "sudo" | xargs -I{} sed -i "/{}/d" $1' > /usr/libexec/nirconium-group-fix
-RUN chmod +x /usr/libexec/nirconium-group-fix
-RUN echo -e '[Unit]\n\
+echo -e '#!/bin/sh\ncat /usr/lib/sysusers.d/*.conf | grep -e "^g" | grep -v -e "^#" | awk "NF" | awk '\''{print $2}'\'' | grep -v -e "wheel" -e "root" -e "sudo" | xargs -I{} sed -i "/{}/d" $1' > /usr/libexec/nirconium-group-fix
+chmod +x /usr/libexec/nirconium-group-fix
+echo -e '[Unit]\n\
 Description=Fix groups\n\
 Wants=local-fs.target\n\
 After=local-fs.target\n\
@@ -46,10 +46,10 @@ ExecStart=systemd-sysusers\n\
 [Install]\n\
 WantedBy=default.target multi-user.target' > /usr/lib/systemd/system/nirconium-group-fix.service
 
-RUN echo -e "enable nirconium-group-fix.service" > /usr/lib/systemd/system-preset/01-nirconium-group-fix.preset
+echo -e "enable nirconium-group-fix.service" > /usr/lib/systemd/system-preset/01-nirconium-group-fix.preset
 
 # system
-RUN systemctl enable polkit.service \
+systemctl enable polkit.service \
     NetworkManager.service \
     tuned.service \
     tuned-ppd.service \
@@ -61,7 +61,7 @@ RUN systemctl enable polkit.service \
     cups-browsed.service
 
 # user
-RUN systemctl --global enable \
+systemctl --global enable \
     udiskie.service \
     opentabletdriver.service \
     wl-clip-persist.service
