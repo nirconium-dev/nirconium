@@ -62,6 +62,5 @@ systemctl enable polkit.service \
 
 # user
 systemctl --global enable \
-    udiskie.service \
     opentabletdriver.service \
     wl-clip-persist.service

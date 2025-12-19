@@ -46,9 +46,14 @@ pacman -S --noconfirm greetd xwayland-satellite xdg-desktop-portal-kde xdg-deskt
 # hypryou
 mkdir -p assets
 cd assets
-curl -Lo https://github.com/koeqaife/hyprland-material-you/releases/download/v2.1.11/hypryou-utils-1.0.0-3-x86_64.pkg.tar.zst
-curl -Lo https://github.com/koeqaife/hyprland-material-you/releases/download/v2.1.11/hypryou-greeter-1.0.0-4-any.pkg.tar.zst
-curl -Lo https://github.com/koeqaife/hyprland-material-you/releases/download/v2.1.11/hypryou-2.1.11-1-x86_64.pkg.tar.zst
-pacman -U *.pkg.tar.zst
+
+curl -JLO https://github.com/koeqaife/hyprland-material-you/releases/download/v2.1.11/hypryou-utils-1.0.0-3-x86_64.pkg.tar.zst
+curl -JLO https://github.com/koeqaife/hyprland-material-you/releases/download/v2.1.11/hypryou-greeter-1.0.0-4-any.pkg.tar.zst
+curl -JLO https://github.com/koeqaife/hyprland-material-you/releases/download/v2.1.11/hypryou-2.1.11-1-x86_64.pkg.tar.zst
+
+pacman -U hypryou-utils-1.0.0-3-x86_64.pkg.tar.zst
+pacman -U hypryou-greeter-1.0.0-4-any.pkg.tar.zst
+pacman -U hypryou-2.1.11-1-x86_64.pkg.tar.zst
+
 cd ..
 rm -rf assets
