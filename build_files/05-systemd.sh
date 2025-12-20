@@ -33,8 +33,7 @@ WantedBy=default.target' > /usr/lib/systemd/user/wl-clip-persist.service
 # This fixes a user/groups error with rebasing from other problematic images.
 # FIXME Do NOT remove until fixed upstream or fixed universally. Updating with new fix also fine. Script created by Tulip.
 mkdir -p /usr/lib/systemd/system-preset /usr/lib/systemd/system
-
-touch /usr/libexec/nirconium-group-fix
+mkdir -p /usr/libexec # this directory doesnt seem to exist during build, hopefully this doesnt affect anything while live
 
 echo -e '#!/bin/sh\ncat /usr/lib/sysusers.d/*.conf | grep -e "^g" | grep -v -e "^#" | awk "NF" | awk '\''{print $2}'\'' | grep -v -e "wheel" -e "root" -e "sudo" | xargs -I{} sed -i "/{}/d" $1' > /usr/libexec/nirconium-group-fix
 chmod +x /usr/libexec/nirconium-group-fix
