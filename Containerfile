@@ -26,9 +26,6 @@ RUN --mount=type=bind,from=ctx,source=/,target=/ctx \
     --mount=type=cache,dst=/var/log \
     --mount=type=tmpfs,dst=/tmp \
     sh /ctx/01-packages.sh && \
-    sh /ctx/02-aur-packages.sh && \
-    sh /ctx/03-flatpaks.sh && \
-    sh /ctx/04-brew.sh && \
     sh /ctx/05-systemd.sh && \
     sh /ctx/06-misc.sh
 
