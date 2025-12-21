@@ -3,6 +3,8 @@ COPY build_files /
 
 FROM docker.io/cachyos/cachyos-v3:latest
 
+ENV DRACUT_NO_XATTR=1
+
 RUN echo "::group::Prepare image build"
 
 # Move everything from `/var` to `/usr/lib/sysimage` so behavior around pacman remains the same on `bootc usroverlay`'d systems
