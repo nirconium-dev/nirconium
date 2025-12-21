@@ -22,10 +22,9 @@ RUN --mount=type=bind,from=ctx,source=/,target=/ctx \
     sh /ctx/00-base.sh && \
     bash /ctx/01-main-pkgs.sh && \
     bash /ctx/02-misc-pkgs.sh && \
-    bash /ctx/03-flatpaks.sh && \
-    bash /ctx/04-brew.sh && \
-    bash /ctx/05-systemd.sh && \
-    bash /ctx/06-misc.sh
+    bash /ctx/03-brew.sh && \
+    bash /ctx/04-systemd.sh && \
+    bash /ctx/05-misc.sh
 
 RUN echo "::group::Finalize image build"
 

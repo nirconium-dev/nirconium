@@ -11,7 +11,6 @@ systemctl enable polkit.service \
     tuned-ppd.service \
     firewalld.service \
     greetd.service \
-    flatpak-preinstall.service \
     nirconium-group-fix.service \
     cups.socket \
     cups-browsed.service \
