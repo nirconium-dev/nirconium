@@ -1,0 +1,3 @@
+[Flatpak Preinstall flathub com.vscodium.codium]
+Branch=stable
+IsRuntime=false

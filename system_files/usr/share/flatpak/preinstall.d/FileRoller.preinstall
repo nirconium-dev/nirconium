@@ -1,0 +1,3 @@
+[Flatpak Preinstall org.gnome.FileRoller]
+Branch=stable
+IsRuntime=false

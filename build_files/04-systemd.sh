@@ -14,6 +14,7 @@ systemctl enable polkit.service \
     firewalld.service \
     greetd.service \
     nirconium-group-fix.service \
+    flatpak-preinstall.service \
     cups.socket \
     cups-browsed.service \
     brew-setup.service \

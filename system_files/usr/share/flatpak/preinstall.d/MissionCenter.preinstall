@@ -1,0 +1,3 @@
+[Flatpak Preinstall flathub io.missioncenter.MissionCenter]
+Branch=stable
+IsRuntime=false
