@@ -40,7 +40,7 @@ pacman -S --noconfirm cups cups-browsed hplip
 
 # desktop
 pacman -S --noconfirm greetd xwayland-satellite xdg-desktop-portal xdg-user-dirs xdg-desktop-portal-gnome \
-    ffmpegthumbs matugen accountsservice  dgop cava nautilus kitty firefox brightnessctl \
+    ffmpegthumbs matugen accountsservice dgop cava nautilus kitty firefox brightnessctl \
     ddcutil xdg-utils archlinux-xdg-menu shared-mime-info glycin gnome-themes-extra
 
 # yay deps
