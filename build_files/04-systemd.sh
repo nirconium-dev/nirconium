@@ -13,7 +13,7 @@ systemctl enable polkit.service \
     tuned-ppd.service \
     firewalld.service \
     greetd.service \
-    nirconium-group-fix.service \
+    rechunker-group-fix.service \
     flatpak-preinstall.service \
     cups.socket \
     cups-browsed.service \
