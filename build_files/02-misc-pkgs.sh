@@ -3,31 +3,8 @@
 
 echo "::group::Install misc packages"
 
-### normal AUR (AUR packages not packaged in Chaotic AUR)
-
-set -x
-
-# setup user
-useradd -m -G wheel builder
-echo "builder:1234" | chpasswd
-echo "%wheel ALL=(ALL:ALL) NOPASSWD: ALL" > /etc/sudoers.d/10-installer
-
-# build yay
-su - builder -c "git clone https://aur.archlinux.org/yay.git ~/yay && \
-                cd ~/yay && \
-                makepkg -si --noconfirm"
-
-# install aur pkgs
-su - builder -c "yay -S --noconfirm hypryou hypryou-greeter warehouse-git devpod soar"
-
-# cleanup
-rm /etc/sudoers.d/10-installer
-pkill -u builder
-userdel -r builder
-
 ### Chaotic AUR / bootc
 
-set +x
 set -euo pipefail
 
 # setup Chaotic AUR
@@ -50,5 +27,26 @@ pacman -S --noconfirm \
     chaotic-aur/ttf-symbola chaotic-aur/opentabletdriver chaotic-aur/qt6ct-kde chaotic-aur/adwaita-qt5-git \
     chaotic-aur/adwaita-qt6-git chaotic-aur/bootc chaotic-aur/ttf-twemoji chaotic-aur/vesktop chaotic-aur/bazaar-git \
     chaotic-aur/pinta chaotic-aur/gearlever chaotic-aur/vscodium bootc/uupd
+
+### normal AUR (AUR packages not packaged in Chaotic AUR)
+
+# setup user
+useradd -m -G wheel builder
+echo "builder:1234" | chpasswd
+echo "%wheel ALL=(ALL:ALL) NOPASSWD: ALL" > /etc/sudoers.d/10-installer
+set +euo pipefail
+
+# build yay
+su - builder -c "git clone https://aur.archlinux.org/yay.git ~/yay && \
+                cd ~/yay && \
+                makepkg -si --noconfirm"
+
+# install aur pkgs
+su - builder -c "yay -S --noconfirm hypryou hypryou-greeter warehouse-git devpod soar"
+
+# cleanup
+rm /etc/sudoers.d/10-installer
+pkill -u builder
+userdel -r builder
 
 echo "::endgroup::"
