@@ -48,4 +48,9 @@ pacman -S --noconfirm \
     chaotic-aur/adwaita-qt6-git chaotic-aur/bootc chaotic-aur/ttf-twemoji chaotic-aur/vesktop chaotic-aur/bazaar-git \
     chaotic-aur/pinta chaotic-aur/gearlever chaotic-aur/vscodium bootc/uupd
 
+# sanity check becuase for gods sake i KNOW the yay build shit itself somehow
+pacman -Qs hypryou
+pacman -Qs devpod
+exit 1
+
 echo "::endgroup::"
