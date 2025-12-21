@@ -1,0 +1,8 @@
+[Unit]
+Description=Persistent wayland clipboard
+
+[Service]
+ExecStart=/usr/bin/wl-clip-persist --clipboard regular
+
+[Install]
+WantedBy=default.target

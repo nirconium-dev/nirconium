@@ -1,0 +1,15 @@
+# This fixes a user/groups error with rebasing from other problematic images.
+# FIXME Do NOT remove until fixed upstream or fixed universally. Updating with new fix also fine. Script/Service created by Tulip.
+[Unit]
+Description=Fix groups
+Wants=local-fs.target
+After=local-fs.target
+
+[Service]
+Type=oneshot
+ExecStart=/usr/libexec/nirconium-group-fix /etc/group
+ExecStart=/usr/libexec/nirconium-group-fix /etc/gshadow
+ExecStart=systemd-sysusers
+
+[Install]
+WantedBy=default.target multi-user.target

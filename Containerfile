@@ -2,6 +2,7 @@ FROM scratch AS ctx
 COPY build_files /
 
 FROM docker.io/cachyos/cachyos-v3:latest
+COPY system_files /
 
 ENV DRACUT_NO_XATTR=1
 
@@ -10,19 +11,6 @@ RUN echo "::group::Prepare image build"
 # Move everything from `/var` to `/usr/lib/sysimage` so behavior around pacman remains the same on `bootc usroverlay`'d systems
 RUN grep "= */var" /etc/pacman.conf | sed "/= *\/var/s/.*=// ; s/ //" | xargs -n1 sh -c 'mkdir -p "/usr/lib/sysimage/$(dirname $(echo $1 | sed "s@/var/@@"))" && mv -v "$1" "/usr/lib/sysimage/$(echo "$1" | sed "s@/var/@@")"' '' && \
     sed -i -e "/= *\/var/ s/^#//" -e "s@= */var@= /usr/lib/sysimage@g" -e "/DownloadUser/d" /etc/pacman.conf
-
-# Set it up such that pacman is always cleaned after installs
-RUN echo -e "[Trigger]\n\
-Operation = Install\n\
-Operation = Upgrade\n\
-Type = Package\n\
-Target = *\n\
-\n\
-[Action]\n\
-Description = Cleaning up package cache...\n\
-Depends = coreutils\n\
-When = PostTransaction\n\
-Exec = /usr/bin/rm -rf /var/cache/pacman/pkg" > /usr/share/libalpm/hooks/package-cleanup.hook
 
 RUN echo "::endgroup::"
 
