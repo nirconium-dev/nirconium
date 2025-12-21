@@ -26,7 +26,7 @@ pacman -S --noconfirm \
     chaotic-aur/flatpak-git chaotic-aur/obs-studio-stable chaotic-aur/obs-vkcapture-git \
     chaotic-aur/ttf-symbola chaotic-aur/opentabletdriver chaotic-aur/qt6ct-kde chaotic-aur/adwaita-qt5-git \
     chaotic-aur/adwaita-qt6-git chaotic-aur/bootc chaotic-aur/ttf-twemoji chaotic-aur/vesktop chaotic-aur/bazaar-git \
-    chaotic-aur/pinta chaotic-aur/gearlever chaotic-aur/vscodium chaotic-aur/rustup-git bootc/uupd
+    chaotic-aur/pinta chaotic-aur/gearlever chaotic-aur/vscodium bootc/uupd
 
 ### normal AUR (AUR packages not packaged in Chaotic AUR)
 
@@ -40,8 +40,11 @@ su - builder -c "git clone https://aur.archlinux.org/yay.git ~/yay && \
                 cd ~/yay && \
                 makepkg -si --noconfirm"
 
+# install rust
+pacman -S --noconfirm extra/rust
+
 # install aur pkgs
-su - builder -c "yay -S --noconfirm warehouse-git devpod soar"
+su - builder -c "yay -S --noconfirm hypryou hypryou-greeter warehouse-git devpod soar"
 
 # cleanup
 rm /etc/sudoers.d/10-installer
