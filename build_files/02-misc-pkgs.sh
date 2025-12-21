@@ -5,6 +5,8 @@ echo "::group::Install misc packages"
 
 ### normal AUR (AUR packages not packaged in Chaotic AUR)
 
+set -x
+
 # setup user
 useradd -m -G wheel builder
 echo "builder:1234" | chpasswd
@@ -25,6 +27,7 @@ userdel -r builder
 
 ### Chaotic AUR / bootc
 
+set +x
 set -euo pipefail
 
 # setup Chaotic AUR
