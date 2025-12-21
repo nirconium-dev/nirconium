@@ -41,11 +41,13 @@ su - builder -c "git clone https://aur.archlinux.org/yay.git ~/yay && \
                 cd ~/yay && \
                 makepkg -si --noconfirm"
 
-# install rust
+# install rust & disable safety
 pacman -S --noconfirm extra/rust
+set +oue pipefail
 
 # install aur pkgs
-su - builder -c "yay -S --noconfirm hypryou hypryou-greeter warehouse-git devpod soar" || true
+su - builder -c "yay -S --noconfirm hypryou hypryou-greeter warehouse-git devpod soar"
+set -oue pipefail
 
 # cleanup
 rm /etc/sudoers.d/10-installer
