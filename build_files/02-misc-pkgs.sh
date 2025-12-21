@@ -45,7 +45,7 @@ su - builder -c "git clone https://aur.archlinux.org/yay.git ~/yay && \
 pacman -S --noconfirm extra/rust
 
 # install aur pkgs
-su - builder -c "yay -S --noconfirm hypryou hypryou-greeter warehouse-git devpod soar"
+su - builder -c "yay -S --noconfirm hypryou hypryou-greeter warehouse-git devpod soar" || true
 
 # cleanup
 rm /etc/sudoers.d/10-installer
