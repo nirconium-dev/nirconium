@@ -38,10 +38,14 @@ pacman -S --noconfirm pipewire pipewire-pulse pipewire-zeroconf pipewire-ffado p
 # printer
 pacman -S --noconfirm cups cups-browsed hplip
 
-# desktop
-pacman -S --noconfirm greetd xwayland-satellite xdg-desktop-portal xdg-user-dirs xdg-desktop-portal-gnome \
+# interface
+pacman -S --noconfirm greetd xdg-desktop-portal xdg-user-dirs xdg-desktop-portal-gnome \
     ffmpegthumbs matugen accountsservice dgop cava nautilus kitty firefox brightnessctl \
     ddcutil xdg-utils archlinux-xdg-menu shared-mime-info glycin gnome-themes-extra
+
+# apps
+pacman -S --noconfirm gnome-music gnome-text-editor gnome-disk-utility gparted file-roller papers \
+    baobab impression showtime loupe mission-center podman-desktop
 
 # yay deps
 pacman -S --noconfirm fakeroot debugedit go make gcc

@@ -1,7 +1,6 @@
 #!/bin/bash
 # commands for installing misc packages (AUR, Chaotic AUR, bootc)
 
-set -euo pipefail
 echo "::group::Install misc packages"
 
 ### Chaotic AUR / bootc
@@ -20,7 +19,8 @@ pacman -Sy --noconfirm
 pacman -S --noconfirm \
     chaotic-aur/hyprland-git chaotic-aur/flatpak-git chaotic-aur/obs-studio-stable chaotic-aur/obs-vkcapture-git \
     chaotic-aur/ttf-symbola chaotic-aur/opentabletdriver chaotic-aur/qt6ct-kde chaotic-aur/adwaita-qt5-git \
-    chaotic-aur/adwaita-qt6-git chaotic-aur/bootc chaotic-aur/ttf-twemoji chaotic-aur/vesktop
+    chaotic-aur/adwaita-qt6-git chaotic-aur/bootc chaotic-aur/ttf-twemoji chaotic-aur/vesktop chaotic-aur/bazaar-git \
+    chaotic-aur/pinta chaotic-aur/gearlever chaotic-aur/vscodium
 
 pacman -S --noconfirm \
     bootc/uupd && \
@@ -39,7 +39,7 @@ su - builder -c "git clone https://aur.archlinux.org/yay.git ~/yay && \
                 makepkg -si --noconfirm"
 
 # install aur pkgs
-su - builder -c "yay -S --noconfirm hypryou hypryou-greeter"
+su - builder -c "yay -S --noconfirm hypryou hypryou-greeter warehouse-git devpod"
 
 # cleanup
 rm /etc/sudoers.d/10-installer
