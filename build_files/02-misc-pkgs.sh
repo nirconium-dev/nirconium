@@ -41,12 +41,9 @@ echo -e '[bootc]\nSigLevel = Required\nServer=https://github.com/hecknt/arch-boo
 
 pacman -Sy --noconfirm
 
-# fix hyprland-git conflicts
-pacman -Rns --noconfirm hyprland
-
 # install Chaotic AUR / bootc packages
 pacman -S --noconfirm \
-    chaotic-aur/hyprland-git chaotic-aur/flatpak-git chaotic-aur/obs-studio-stable chaotic-aur/obs-vkcapture-git \
+    chaotic-aur/flatpak-git chaotic-aur/obs-studio-stable chaotic-aur/obs-vkcapture-git \
     chaotic-aur/ttf-symbola chaotic-aur/opentabletdriver chaotic-aur/qt6ct-kde chaotic-aur/adwaita-qt5-git \
     chaotic-aur/adwaita-qt6-git chaotic-aur/bootc chaotic-aur/ttf-twemoji chaotic-aur/vesktop chaotic-aur/bazaar-git \
     chaotic-aur/pinta chaotic-aur/gearlever chaotic-aur/vscodium bootc/uupd
