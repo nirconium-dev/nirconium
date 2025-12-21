@@ -16,7 +16,7 @@ pacman -S --noconfirm noto-fonts noto-fonts-cjk noto-fonts-emoji unicode-emoji n
     ttf-nerd-fonts-symbols-mono ttf-croscore ttf-dejavu ttf-droid gsfonts ttf-arphic-uming ttf-baekmuk gnu-free-fonts otf-monaspace
 
 # cli
-pacman -S --noconfirm sudo fastfetch btop jq less lsof nano openssh powertop man-db wget yt-dlp \
+pacman -S --noconfirm sudo fastfetch btop jq less lsof nano openssh powertop man-db wget yt-dlp fakeroot debugedit go make gcc \
     tree usbutils vim wl-clip-persist cliphist unzip ptyxis glibc-locales tar udev starship tuned-ppd tuned hyfetch curl patchelf git
 
 # containerization
@@ -51,8 +51,5 @@ pacman -S --noconfirm greetd hyprland xdg-desktop-portal xdg-user-dirs xdg-deskt
 # apps
 pacman -S --noconfirm gnome-music gnome-text-editor gnome-disk-utility gparted file-roller papers \
     baobab impression showtime loupe mission-center podman-desktop
-
-# yay deps
-pacman -S --noconfirm fakeroot debugedit go make gcc
 
 echo "::endgroup::"
