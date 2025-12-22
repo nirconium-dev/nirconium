@@ -1,0 +1,18 @@
+# FIXME
+# /etc mounts as read-only on boot for no obvious reason, so this service fixes that
+# this service is to be kept active until a reason is found
+# WARNING: this may be incompatible with having etc.transient set in OSTree root confing
+[Unit]
+Description=Remount /etc as Read-Write
+After=ostree-prepare-root.service
+DefaultDependencies=no
+Conflicts=shutdown.target
+Before=sysinit.target
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/mount -o remount,rw /etc
+RemainAfterExit=yes
+
+[Install]
+WantedBy=sysinit.target

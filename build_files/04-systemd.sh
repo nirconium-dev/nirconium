@@ -18,6 +18,7 @@ systemctl enable polkit.service \
     cups.socket \
     cups-browsed.service \
     brew-setup.service \
+    remount-etc-rw-fix.service \
     uupd.timer
 
 # user
