@@ -26,7 +26,7 @@ pacman -Sy --noconfirm
 pacman -S --noconfirm \
     chaotic-aur/flatpak-git chaotic-aur/obs-studio-stable chaotic-aur/obs-vkcapture-git \
     chaotic-aur/ttf-symbola chaotic-aur/opentabletdriver chaotic-aur/qt6ct-kde chaotic-aur/adwaita-qt5-git \
-    chaotic-aur/adwaita-qt6-git chaotic-aur/bootc chaotic-aur/ttf-twemoji chaotic-aur/floorp bootc/uupd \
+    chaotic-aur/adwaita-qt6-git chaotic-aur/bootc chaotic-aur/ttf-twemoji bootc/uupd \
 
 ### normal AUR (AUR packages not packaged in Chaotic AUR)
 

@@ -53,7 +53,7 @@ pacman -S --noconfirm greetd hyprland xdg-desktop-portal xdg-user-dirs xdg-deskt
     hicolor-icon-theme
 
 # apps
-pacman -S --noconfirm dolphin okular gwenview ark plasma-systemmonitor kate kdenlive frameworkintegration \
+pacman -S --noconfirm vivaldi dolphin okular gwenview ark plasma-systemmonitor kate kdenlive frameworkintegration \
     kdeconnect krita partitionmanager kcalc haruna elisa kweather impression
 
 echo "::endgroup::"
