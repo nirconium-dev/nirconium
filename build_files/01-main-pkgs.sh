@@ -3,12 +3,11 @@
 
 echo "::group::===========================> Install main packages"
 
-set -euo pipefail
-set +x
+set -ouex pipefail
 
 # media
-pacman -S --noconfirm librsvg libglvnd qt6-multimedia-ffmpeg plymouth acpid ddcutil dmidecode \
-    mesa-utils vulkan-tools wayland-utils playerctl
+pacman -S --noconfirm librsvg libglvnd plymouth acpid ddcutil dmidecode mesa-utils ffmpeg vulkan-tools wayland-utils \
+    playerctl gst-libav gst-plugins-bad gst-plugins-base gst-plugins-good gst-plugins-ugly
 
 # fonts
 pacman -S --noconfirm noto-fonts noto-fonts-cjk noto-fonts-emoji unicode-emoji noto-fonts-extra \
@@ -50,10 +49,11 @@ pacman -S --noconfirm gpart exfatprogs f2fs-tools jfsutils mtools nilfs-utils nt
 # interface
 pacman -S --noconfirm greetd hyprland xdg-desktop-portal xdg-user-dirs xdg-desktop-portal-gnome ffmpegthumbs matugen \
     accountsservice dgop cava brightnessctl ddcutil xdg-utils archlinux-xdg-menu shared-mime-info glycin gnome-themes-extra \
-    hicolor-icon-theme papirus-icon-theme
+    hicolor-icon-theme adwaita-icon-theme tela-circle-icon-theme-nord
 
 # apps
-pacman -S --noconfirm vivaldi dolphin okular gwenview ark plasma-systemmonitor kate kdenlive frameworkintegration \
-    kdeconnect krita partitionmanager kcalc haruna elisa kweather impression
+# keep an eye on https://github.com/andyholmes/valent, extremely viable alternative to KDE Connect
+pacman -S --noconfirm firefox nautilus papers loupe ark mission-center gnome-text-editor flowblade frameworkintegration \
+    kdeconnect gimp gnome-disk-utility gparted gnome-calculator showtime gnome-music gnome-weather impression podman-desktop
 
 echo "::endgroup::"

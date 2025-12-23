@@ -3,8 +3,7 @@
 
 echo "::group::===========================> Miscellaneous tasks"
 
-set -euo pipefail
-set +x
+set -ouex pipefail
 
 # set Darkly as default Qt theme
 echo "QT_STYLE_OVERRIDE=Darkly" | tee -a /etc/environment

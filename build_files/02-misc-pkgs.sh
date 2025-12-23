@@ -3,8 +3,7 @@
 
 echo "::group::===========================> Install misc packages"
 
-set -euo pipefail
-set +x
+set -ouex pipefail
 
 ### Chaotic AUR / bootc
 

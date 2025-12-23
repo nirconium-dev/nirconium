@@ -3,8 +3,7 @@
 
 echo "::group::===========================> Configure systemd services"
 
-set -euo pipefail
-set +x
+set -ouex pipefail
 
 # system
 systemctl enable polkit.service \
