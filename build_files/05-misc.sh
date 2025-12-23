@@ -8,9 +8,6 @@ set -ouex pipefail
 # set Darkly as default Qt theme
 echo "QT_STYLE_OVERRIDE=Darkly" | tee -a /etc/environment
 
-# remove unused wayland sessions
-rm /usr/share/wayland-sessions/hyprland{,-uwsm}.desktop
-
 # manually add greetd user due to rebase issues
 useradd -M -G video,input -s /usr/bin/nologin greeter || true
 
