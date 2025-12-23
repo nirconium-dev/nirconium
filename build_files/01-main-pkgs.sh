@@ -16,6 +16,9 @@ pacman -S --noconfirm noto-fonts noto-fonts-cjk noto-fonts-emoji unicode-emoji n
     ttf-nerd-fonts-symbols-mono ttf-croscore ttf-dejavu ttf-droid gsfonts ttf-arphic-uming ttf-baekmuk gnu-free-fonts \
     otf-monaspace
 
+# bluetooth
+pacman -S --noconfirm bluez bluez-utils
+
 # cli
 pacman -S --noconfirm sudo fastfetch btop jq less lsof nano openssh powertop man-db wget yt-dlp fakeroot debugedit go make \
     gcc tree usbutils vim wl-clip-persist cliphist unzip ptyxis glibc-locales tar udev starship tuned-ppd tuned hyfetch \
@@ -46,10 +49,11 @@ pacman -S --noconfirm gpart exfatprogs f2fs-tools jfsutils mtools nilfs-utils nt
 
 # interface
 pacman -S --noconfirm greetd hyprland xdg-desktop-portal xdg-user-dirs xdg-desktop-portal-gnome ffmpegthumbs matugen \
-    accountsservice dgop cava  brightnessctl ddcutil xdg-utils archlinux-xdg-menu shared-mime-info glycin gnome-themes-extra
+    accountsservice dgop cava brightnessctl ddcutil xdg-utils archlinux-xdg-menu shared-mime-info glycin gnome-themes-extra \
+    hicolor-icon-theme
 
 # apps
-pacman -S --noconfirm firefox kitty dolphin okular gwenview ark plasma-systemmonitor kate kdenlive frameworkintegration \
-    kdeconnect krita partitionmanager kcalc haruna elisa kweather impression systemsettings
+pacman -S --noconfirm dolphin okular gwenview ark plasma-systemmonitor kate kdenlive frameworkintegration \
+    kdeconnect krita partitionmanager kcalc haruna elisa kweather impression
 
 echo "::endgroup::"
