@@ -1,8 +1,6 @@
 #!/bin/sh
 # prepare base image, DO NOT MODIFY
 
-echo "::group::===========================> Prepare image build"
-
 # FIXME | Fix an issue with Cachy's docker, pacman -syu fails otherwise https://discuss.cachyos.org/t/cant-update-because-of-linux-firmware-notice/19835
 mkdir /usr/lib/sysimage/lib/pacmanlocal -p
 
