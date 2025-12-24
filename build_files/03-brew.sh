@@ -1,4 +1,4 @@
-#!/bin/zsh
+#!/bin/bash
 # install Brew
 
 echo "::group::===========================> Install Brew"

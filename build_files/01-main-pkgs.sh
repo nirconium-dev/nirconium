@@ -1,4 +1,4 @@
-#!/bin/zsh
+#!/bin/bash
 # commands for installing main arch packages
 
 echo "::group::===========================> Install main packages"

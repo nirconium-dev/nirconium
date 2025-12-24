@@ -1,4 +1,4 @@
-#!/bin/zsh
+#!/bin/bash
 # miscellaneous stuff
 
 echo "::group::===========================> Miscellaneous tasks"
@@ -23,6 +23,9 @@ echo -e '[zram0]\nzram-size = min(ram, 8192)' > /usr/lib/systemd/zram-generator.
 echo -e 'enable systemd-resolved.service' > /usr/lib/systemd/system-preset/91-resolved-default.preset
 echo -e 'L /etc/resolv.conf - - - - ../run/systemd/resolve/stub-resolv.conf' > /usr/lib/tmpfiles.d/resolved-default.conf
 systemctl preset systemd-resolved.service
+
+# setup starship prompt
+echo 'eval "$(starship init bash)"' > /etc/profile.d/starship-init.sh
 
 # branding stuffs
 cp -f /usr/share/nirconium/pixmaps/watermark.png /usr/share/plymouth/themes/spinner/watermark.png
