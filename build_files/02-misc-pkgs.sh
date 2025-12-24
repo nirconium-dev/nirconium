@@ -23,7 +23,7 @@ pacman -Sy --noconfirm
 
 # install Chaotic AUR / bootc packages
 pacman -S --noconfirm \
-    chaotic-aur/flatpak-git chaotic-aur/obs-studio-stable chaotic-aur/obs-vkcapture-git chaotic-aur/distroshelf \
+    chaotic-aur/flatpak-git chaotic-aur/obs-studio-stable chaotic-aur/obs-vkcapture-git chaotic-aur/distroshelf chaotic-aur/zen-browser-bin \
     chaotic-aur/ttf-symbola chaotic-aur/opentabletdriver chaotic-aur/qt6ct-kde chaotic-aur/ttf-twemoji chaotic-aur/bootc \
     chaotic-aur/bibata-cursor-theme chaotic-aur/bazaar-git chaotic-aur/gearlever chaotic-aur/darkly-qt6-git bootc/uupd
 
