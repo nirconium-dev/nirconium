@@ -24,7 +24,7 @@ pacman -S --noconfirm sudo fastfetch btop jq less lsof nano openssh powertop man
     curl patchelf git
 
 # containerization
-pacman -S --noconfirm distrobox podman
+pacman -S --noconfirm distrobox podman docker
 
 # drivers
 pacman -S --noconfirm libinput amd-ucode intel-ucode efibootmgr shim mesa libva-intel-driver libva-mesa-driver vpl-gpu-rt \
