@@ -53,7 +53,7 @@ pacman -S --noconfirm greetd hyprland xdg-desktop-portal xdg-user-dirs xdg-deskt
 
 # apps
 # keep an eye on https://github.com/andyholmes/valent, extremely viable alternative to KDE Connect
-pacman -S --noconfirm firefox nautilus papers loupe ark mission-center gnome-text-editor flowblade frameworkintegration code \
+pacman -S --noconfirm firefox nautilus papers loupe ark mission-center gnome-text-editor flowblade frameworkintegration zed \
     kdeconnect gimp gnome-disk-utility gparted gnome-calculator showtime gnome-music gnome-weather impression podman-desktop
 
 echo "::endgroup::"
