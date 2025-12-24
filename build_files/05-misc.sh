@@ -24,7 +24,8 @@ echo -e 'enable systemd-resolved.service' > /usr/lib/systemd/system-preset/91-re
 echo -e 'L /etc/resolv.conf - - - - ../run/systemd/resolve/stub-resolv.conf' > /usr/lib/tmpfiles.d/resolved-default.conf
 systemctl preset systemd-resolved.service
 
-# more branding
+# branding stuffs
+cp -f /usr/share/nirconium/pixmaps/watermark.png /usr/share/plymouth/themes/spinner/watermark.png
 sed -i -f - /usr/lib/os-release <<EOF
 s|^NAME=.*|NAME=\"Nirconium\"|
 s|^PRETTY_NAME=.*|PRETTY_NAME=\"Nirconium\"|
