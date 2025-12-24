@@ -13,6 +13,7 @@ systemctl enable polkit.service \
     firewalld.service \
     greetd.service \
     rechunker-group-fix.service \
+    kdeconnect-firewalld-bypass.service \
     cups.socket \
     cups-browsed.service \
     brew-setup.service \
