@@ -27,6 +27,9 @@ systemctl preset systemd-resolved.service
 # setup starship prompt
 echo 'eval "$(starship init bash)"' >> /etc/bash.bashrc
 
+# make jetbrains-mono default Foot font
+sed -i 's/^# font=monospace:size=11/font=JetBrains Mono Nerd:size=11/' /etc/xdg/foot/foot.ini
+
 # branding stuffs
 cp -f /usr/share/nirconium/pixmaps/watermark.png /usr/share/plymouth/themes/spinner/watermark.png
 sed -i -f - /usr/lib/os-release <<EOF

@@ -11,9 +11,9 @@ pacman -S --noconfirm librsvg libglvnd plymouth acpid ddcutil dmidecode mesa-uti
 
 # fonts
 pacman -S --noconfirm noto-fonts noto-fonts-cjk noto-fonts-emoji unicode-emoji noto-fonts-extra \
-    ttf-ibm-plex otf-font-awesome ttf-jetbrains-mono wqy-microhei ttf-nerd-fonts-symbols ttf-nerd-fonts-symbols-common \
-    ttf-nerd-fonts-symbols-mono ttf-croscore ttf-dejavu ttf-droid gsfonts ttf-arphic-uming ttf-baekmuk gnu-free-fonts \
-    otf-monaspace
+    ttf-ibm-plex otf-font-awesome ttf-jetbrains-mono ttf-jetbrains-mono-nerd wqy-microhei ttf-nerd-fonts-symbols \
+    ttf-nerd-fonts-symbols-common ttf-nerd-fonts-symbols-mono ttf-croscore ttf-dejavu ttf-droid gsfonts \
+    ttf-arphic-uming ttf-baekmuk gnu-free-fonts otf-monaspace
 
 # bluetooth
 pacman -S --noconfirm bluez bluez-utils
