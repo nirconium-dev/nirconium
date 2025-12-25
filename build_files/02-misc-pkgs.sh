@@ -25,7 +25,7 @@ pacman -Sy --noconfirm
 pacman -S --noconfirm \
     chaotic-aur/flatpak-git chaotic-aur/obs-studio-stable chaotic-aur/obs-vkcapture-git chaotic-aur/distroshelf chaotic-aur/zen-browser-bin \
     chaotic-aur/ttf-symbola chaotic-aur/opentabletdriver chaotic-aur/qt6ct-kde chaotic-aur/ttf-twemoji chaotic-aur/darkly-qt6-git chaotic-aur/bootc \
-    chaotic-aur/bibata-cursor-theme chaotic-aur/bazaar-git chaotic-aur/gearlever bootc/uupd
+    chaotic-aur/iio-hyprland-git chaotic-aur/bibata-cursor-theme chaotic-aur/bazaar-git chaotic-aur/gearlever bootc/uupd
 
 ### normal AUR (AUR packages not packaged in Chaotic AUR)
 
