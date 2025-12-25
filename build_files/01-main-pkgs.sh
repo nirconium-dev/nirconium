@@ -52,8 +52,9 @@ pacman -S --noconfirm greetd hyprland xdg-desktop-portal xdg-user-dirs xdg-deskt
     adwaita-icon-theme tela-circle-icon-theme-nord
 
 # apps
-# keep an eye on https://github.com/andyholmes/valent, extremely viable alternative to KDE Connect
-pacman -S --noconfirm nautilus papers loupe ark mission-center gnome-text-editor flowblade frameworkintegration zed \
-    kdeconnect gimp gnome-disk-utility gparted gnome-calculator showtime gnome-music gnome-weather impression podman-desktop
+# IMPORTANT: keep an eye on https://github.com/andyholmes/valent, extremely viable alternative to KDE Connect
+pacman -S --noconfirm nautilus papers loupe ark mission-center gnome-text-editor gnome-calendar frameworkintegration zed \
+    kdeconnect gnome-disk-utility gparted gnome-calculator showtime gnome-music gnome-weather impression podman-desktop \
+    decibels secrets sysprof
 
 echo "::endgroup::"
