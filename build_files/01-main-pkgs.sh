@@ -48,8 +48,7 @@ pacman -S --noconfirm gpart exfatprogs f2fs-tools jfsutils mtools nilfs-utils nt
 
 # interface
 pacman -S --noconfirm greetd hyprland xdg-desktop-portal xdg-user-dirs xdg-desktop-portal-gnome ffmpegthumbs matugen \
-    accountsservice dgop cava brightnessctl ddcutil xdg-utils archlinux-xdg-menu shared-mime-info glycin gnome-themes-extra \
-    adwaita-icon-theme tela-circle-icon-theme-nord
+    accountsservice dgop cava brightnessctl ddcutil xdg-utils shared-mime-info glycin  tela-circle-icon-theme-nord \
 
 # apps
 # IMPORTANT: keep an eye on https://github.com/andyholmes/valent, extremely viable alternative to KDE Connect
