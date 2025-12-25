@@ -45,7 +45,7 @@ set +oue pipefail
 # install aur pkgs
 # IMPORTANT: chaotic-aur requests to build these pkgs have been submitted, keep an eye on them
 #            so we hopefully dont have to build them ourselves anymore
-su - builder -c "yay -S --noconfirm hypryou hypryou-greeter warehouse-git devpod"
+su - builder -c "yay -S --noconfirm hypryou hypryou-greeter warehouse-git"
 
 # cleanup
 rm /etc/sudoers.d/10-installer

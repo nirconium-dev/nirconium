@@ -34,13 +34,13 @@ Absolutely! Although we've worked to provide good defaults OOTB, you can still c
 
 - CachyOS-v3 kernel with v3 cpu optimizations and the Bore scheduler
 
-- Foot terminal for a blazing-fast experience alsong with starship for looks
+- Foot terminal for a blazing-fast experience along with starship for looks
 
 - Flatpak/AppImage support OOTB with Bazaar/Warehouse (software store, flatpak manager) and Gear Lever (AppImage manager)
 
-- Distrobox/Podman/Docker for containerization, along with Podman Desktop, Devpod, and DistroShelf
+- Distrobox and Podman for containerization, along with DistroShelf
 
-- Zed, a high-performance rust-based IDE for code editing (comaptible with Devpod)
+- Zed, a high-performance rust-based IDE for code editing
 
 
 # Nirconium is a stupid name. Why Nirconium?
