@@ -40,7 +40,7 @@ Absolutely! Although we've worked to provide good defaults OOTB, you can still c
 
 - Distrobox/Podman/Docker for containerization, along with Podman Desktop, Devpod, and DistroShelf
 
-- Zed IDE for code editing, can be used with Devpod
+- Zed, a high-performance rust-based IDE for code editing (comaptible with Devpod)
 
 
 # Nirconium is a stupid name. Why Nirconium?

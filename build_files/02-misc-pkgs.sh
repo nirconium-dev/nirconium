@@ -42,10 +42,12 @@ su - builder -c "git clone https://aur.archlinux.org/yay.git ~/yay && \
 # disable safety
 set +oue pipefail
 
-# install aur pkgs
-su - builder -c "yay -S --noconfirm hypryou hypryou-greeter warehouse-git"
+# install aur pkgs/deps
+# pacman -S --noconfirm extra/rust
+su - builder -c "yay -S --noconfirm hypryou hypryou-greeter warehouse-git devpod"
 
 # cleanup
+# pacman -Rns --noconfirm extra/rust
 rm /etc/sudoers.d/10-installer
 pkill -u builder
 userdel -r builder
