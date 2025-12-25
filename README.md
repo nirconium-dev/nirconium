@@ -38,6 +38,10 @@ Absolutely! Although we've worked to provide good defaults OOTB, you can still c
 
 - Flatpak/AppImage support OOTB with Bazaar/Warehouse (software store, flatpak manager) and Gear Lever (AppImage manager)
 
+- Distrobox/Podman/Docker for containerization, along with Podman Desktop, Devpod, and DistroShelf
+
+- Zed IDE for code editing, can be used with Devpod
+
 
 # Nirconium is a stupid name. Why Nirconium?
 My hatred for a specific wax baby inspired the name.
