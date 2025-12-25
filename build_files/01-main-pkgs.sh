@@ -27,7 +27,7 @@ pacman -S --noconfirm sudo fastfetch btop jq less lsof nano openssh powertop man
 pacman -S --noconfirm distrobox podman docker
 
 # drivers
-pacman -S --noconfirm libinput amd-ucode intel-ucode efibootmgr shim mesa libva-intel-driver libva-mesa-driver vpl-gpu-rt \
+pacman -S --noconfirm iio-sensor-proxy amd-ucode intel-ucode efibootmgr shim mesa libva-intel-driver libva-mesa-driver vpl-gpu-rt \
     vulkan-icd-loader vulkan-intel vulkan-radeon apparmor xf86-video-amdgpu lib32-vulkan-radeon zram-generator lm_sensors
 
 # network
