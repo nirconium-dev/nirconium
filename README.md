@@ -57,7 +57,7 @@ This OS is only compatible and intended for desktop PCs with AMD/Intel graphics,
 # Contact
 Tartaria is headed by me, certifiedfooliolol. You may contact me via my Discord handle, `shartmunk`. Creative username, I know.
 
-Many thanks to the [Bootcrew Discord](https://discord.gg/52Qcb4x2w3) for general help/support!
+Many thanks to the [Bootcrew Discord](https://discord.gg/52Qcb4x2w3) for general help/support and the developers of Zirconium and XeniaOS for inspiring this project!
 
 
 # Literally any other name would've been better. Why?
