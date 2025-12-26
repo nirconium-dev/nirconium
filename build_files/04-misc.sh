@@ -27,25 +27,16 @@ systemctl preset systemd-resolved.service
 # refresh font cache
 fc-cache --force --really-force --system-only --verbose
 
-# setup starship prompt
+# setup oh-my-posh prompt
 echo 'eval "$(oh-my-posh init bash)"' >> /etc/bash.bashrc
 
-# make jetbrains-mono default Foot font
+# make firacode-nerd default Foot font
 sed -i 's/^# font=monospace:size=11/font=FiraCode Nerd Font:size=11/' /etc/xdg/foot/foot.ini
 
-# branding stuffs
-cp -f /usr/share/nirconium/pixmaps/watermark.png /usr/share/plymouth/themes/spinner/watermark.png
-sed -i -f - /usr/lib/os-release <<EOF
-s|^NAME=.*|NAME=\"Nirconium\"|
-s|^PRETTY_NAME=.*|PRETTY_NAME=\"Nirconium\"|
-s|^VERSION_CODENAME=.*|VERSION_CODENAME=\"Kyntra\"|
-s|^VARIANT_ID=.*|VARIANT_ID=""|
-s|^HOME_URL=.*|HOME_URL=\"https://github.com/nirconium-dev/nirconium\"|
-s|^BUG_REPORT_URL=.*|BUG_REPORT_URL=\"https://github.com/nirconium-dev/nirconium/issues\"|
-s|^SUPPORT_URL=.*|SUPPORT_URL=\"https://github.com/nirconium-dev/nirconium/issues\"|
-s|^CPE_NAME=\".*\"|CPE_NAME=\"cpe:/o:nirconium-dev:nirconium\"|
-s|^DOCUMENTATION_URL=.*|DOCUMENTATION_URL=\"https://github.com/nirconium-dev/nirconium\"|
-s|^DEFAULT_HOSTNAME=.*|DEFAULT_HOSTNAME="nirconium"|
-EOF
+# set default wallpaper
+cp -f /usr/share/tartaria/wallpapers/default_wallpaper.jpg /usr/share/hypryou/default_wallpaper.jpg
+
+# apply bootscreen logo
+cp -f /usr/share/tartaria/pixmaps/watermark.png /usr/share/plymouth/themes/spinner/watermark.png
 
 echo "::endgroup::"

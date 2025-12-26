@@ -1,8 +1,8 @@
-NAME="Nirconium"
-PRETTY_NAME="Nirconium"
+NAME="Tartaria"
+PRETTY_NAME="Tartaria"
 ID=arch
 BUILD_ID=rolling
-ANSI_COLOR="38;2;120;190;165"
-HOME_URL="https://github.com/nirconium-dev/nirconium"
+ANSI_COLOR="38;2;23;147;209
+HOME_URL="https://github.com/tartaria-dev/tartaria"
 LOGO=archlinux-logo
-DEFAULT_HOSTNAME="nirconium"
+DEFAULT_HOSTNAME="tartaria"

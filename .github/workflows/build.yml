@@ -1,5 +1,5 @@
 ---
-name: Build Nirconium
+name: Build Tartaria
 on:
   pull_request:
     branches:
@@ -28,7 +28,7 @@ concurrency:
 
 jobs:
   build_push:
-    name: Build Nirconium
+    name: Build Tartaria
     runs-on: ubuntu-24.04
 
     permissions:

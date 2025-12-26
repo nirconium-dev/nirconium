@@ -1,13 +1,14 @@
 <p align="center">
-  <img src="https://raw.githubusercontent.com/nirconium-dev/.github/refs/heads/main/142.svg" alt="Nirconium Logo" width="300">
+  <img src="https://raw.githubusercontent.com/tartaria-dev/.github/refs/heads/main/142.svg" alt="Tartaria Logo" width="300">
 </p>
 
+<h3 align="center">/tɑːrˈtɛəriə/</h3>
 <h3 align="center">Arch Bootc / Hyprland / HyprYou</h3>
 
 <img width="1366" height="768" alt="2025-12-24-221431_hyprshot" src="https://github.com/user-attachments/assets/1a85d767-9b49-489a-8e4c-7ee4a12ff17c" />
 
 
-# What's Nirconium?
+# What's Tartaria?
 A custom arch-bootc image built for container usage, general development, and day-to-day usage, making use of the [Hyprland](https://hypr.land) compositor and the [HyprYou](https://github.com/koeqaife/hyprland-material-you) desktop shell to provide a usable TWM experience OOTB that does not sacrifice on looks.
 
 
@@ -15,7 +16,7 @@ A custom arch-bootc image built for container usage, general development, and da
 At the moment, only rebasing is supported. Fair warning, rebasing has been highly untested, although stock Fedora Silverblue has worked best in my experience as a base.
 Use the following command on any Fedora based system that supports `bootc`:
 ```
-sudo bootc switch ghcr.io/nirconium-dev/nirconium
+sudo bootc switch ghcr.io/tartaria-dev/tartaria
 ```
 ...and you'll be on your (jolly) way!
 
@@ -52,7 +53,7 @@ This OS is only compatible and intended for desktop PCs with AMD/Intel graphics,
 
 
 # Contact
-Nirconium is headed by me, certifiedfooliolol. You may contact me via my Discord handle, `shartmunk`. Creative username, I know.
+Tartaria is headed by me, certifiedfooliolol. You may contact me via my Discord handle, `shartmunk`. Creative username, I know.
 
 Many thanks to the [Bootcrew Discord](https://discord.gg/52Qcb4x2w3) for general help/support!
 
