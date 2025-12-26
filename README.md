@@ -5,7 +5,9 @@
 <h3 align="center">/tɑːrˈtɛəriə/</h3>
 <h3 align="center">Arch Bootc / Hyprland / HyprYou</h3>
 
-<img width="1366" height="768" alt="2025-12-24-221431_hyprshot" src="https://github.com/user-attachments/assets/1a85d767-9b49-489a-8e4c-7ee4a12ff17c" />
+<p align="center">
+  <img width="1366" height="768" alt="2025-12-26-151855_hyprshot" src="https://github.com/user-attachments/assets/3041b85f-3bfb-4f27-9ac9-83f74339948f" />
+</p>
 
 
 # What's Tartaria?
