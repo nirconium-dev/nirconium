@@ -58,7 +58,7 @@ Many thanks to the [Bootcrew Discord](https://discord.gg/52Qcb4x2w3) for general
 
 
 # Why Hyprland?
-I understand there are controversies surrounding the author of the software and the general community, but I still stick with it due to how nice and modern Hyprland is. Also the fact that if it switched to an admittedly more modern alternative, particularly Niri, I might as well be a XeniaOS fork.
+I understand there are controversies surrounding the author of the software and the general community, but I still stick with it due to how nice and modern Hyprland is. Also the fact that if it switched to an admittedly more modern alternative, particularly Niri, I might as well be a XeniaOS fork. Not that it's a bad thing, but I would like to remain sufficiently different than what's currently available.
 
 
 # Literally any other name would've been better. Why?
