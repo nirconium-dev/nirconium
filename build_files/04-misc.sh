@@ -15,7 +15,7 @@ useradd -M -G video,input -s /usr/bin/nologin greeter || true
 echo -e 'ntsync' > /etc/modules-load.d/ntsync.conf
 
 # enable bbr3
-echo -e 'net.core.default_qdisc=fq 
+echo -e 'net.core.default_qdisc=fq
 net.ipv4.tcp_congestion_control=bbr' > /etc/sysctl.d/99-bbr3.conf
 
 # setup zram
@@ -31,7 +31,7 @@ fc-cache --force --really-force --system-only --verbose
 echo 'eval "$(oh-my-posh init bash)"' >> /etc/bash.bashrc
 
 # make jetbrains-mono default Foot font
-sed -i 's/^# font=monospace:size=11/font=JetBrains Mono Nerd:size=11/' /etc/xdg/foot/foot.ini
+sed -i 's/^# font=monospace:size=11/font=monospace:size=11/' /etc/xdg/foot/foot.ini
 
 # branding stuffs
 cp -f /usr/share/nirconium/pixmaps/watermark.png /usr/share/plymouth/themes/spinner/watermark.png
