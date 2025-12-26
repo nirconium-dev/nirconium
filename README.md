@@ -57,5 +57,9 @@ Nirconium is headed by me, certifiedfooliolol. You may contact me via my Discord
 Many thanks to the [Bootcrew Discord](https://discord.gg/52Qcb4x2w3) for general help/support!
 
 
+# Why Hyprland?
+I understand there are controversies surrounding the author of the software and the general community, but I still stick with it due to how nice and modern Hyprland is. Also the fact that if it switched to an admittedly more modern alternative, particularly Niri, I might as well be a XeniaOS fork.
+
+
 # Literally any other name would've been better. Why?
 My pure, unadulterated hatred for a specific wax baby inspired the name. God, I hate that baby.
