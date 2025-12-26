@@ -8,12 +8,12 @@
 
 
 # What's Nirconium?
-A custom arch-bootc image built for container usage/development and day-to-day usage, making use of [Hyprland](https://hypr.land) and [HyprYou](https://github.com/koeqaife/hyprland-material-you) to provide a usable OOTB TWM experience without sacrificing on looks.
+A custom arch-bootc image built for container usage/development and day-to-day usage, making use of [Hyprland](https://hypr.land) and [HyprYou](https://github.com/koeqaife/hyprland-material-you) to provide a usable TWM experience OOTB that does not sacrifice on looks.
 
 
 # How can I use this?
-At the moment, only rebasing is supported. Rebasing has been highly untested, however, so please report any issues rebasing.
-Use the following command on any Fedora or Fedora based system that supports `bootc`:
+At the moment, only rebasing is supported. Fair warning, rebasing has been highly untested, although stock Fedora Silverblue has worked best in my experience as a base.
+Use the following command on any Fedora based system that supports `bootc`:
 ```
 sudo bootc switch ghcr.io/nirconium-dev/nirconium
 ```
