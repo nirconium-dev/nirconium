@@ -50,9 +50,7 @@ This OS is only compatible and intended for desktop PCs with AMD/Intel graphics,
 
 
 # Contact
-Developers can currently most easily be reached in the [Zirconium Discord](https://discord.gg/mmgNQpxwhW) or the [Bootcrew Discord](https://discord.gg/52Qcb4x2w3).
-
-Nirconium is headed by certifiedfooliolol/'somebody once told me'/shartmunk.
+Nirconium is headed by me, certifiedfooliolol. You may contact me via my Discord handle, `shartmunk`. Creative username, I know.
 
 Many thanks to the [Bootcrew Discord](https://discord.gg/52Qcb4x2w3) for general help/support!
 
