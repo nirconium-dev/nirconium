@@ -5,57 +5,214 @@ echo "::group::===========================> Install main packages"
 
 set -ouex pipefail
 
-# media
-pacman -S --noconfirm librsvg libglvnd plymouth acpid ddcutil dmidecode mesa-utils ffmpeg vulkan-tools wayland-utils \
-    playerctl gst-libav gst-plugins-bad gst-plugins-base gst-plugins-good gst-plugins-ugly xwayland-satellite
-
-# fonts
-pacman -S --noconfirm noto-fonts noto-fonts-cjk noto-fonts-emoji unicode-emoji noto-fonts-extra \
-    ttf-ibm-plex otf-font-awesome ttf-fira-code ttf-firacode-nerd wqy-microhei ttf-nerd-fonts-symbols \
-    ttf-nerd-fonts-symbols-common ttf-nerd-fonts-symbols-mono ttf-croscore ttf-dejavu ttf-droid gsfonts \
-    ttf-arphic-uming ttf-baekmuk gnu-free-fonts otf-monaspace
-
-# bluetooth
-pacman -S --noconfirm bluez bluez-utils
-
 # cli
-pacman -S --noconfirm sudo fastfetch jq less lsof nano openssh powertop man-db wget yt-dlp fakeroot debugedit go make \
-    gcc tree usbutils vim wl-clip-persist cliphist unzip foot glibc-locales tar udev tuned-ppd tuned patchelf git curl \
-    bash bash-completion chezmoi
-
-# containerization
-pacman -S --noconfirm distrobox podman docker
-
-# drivers
-pacman -S --noconfirm iio-sensor-proxy amd-ucode intel-ucode efibootmgr shim mesa libva-intel-driver libva-mesa-driver vpl-gpu-rt \
-    vulkan-icd-loader vulkan-intel vulkan-radeon apparmor xf86-video-amdgpu lib32-vulkan-radeon zram-generator lm_sensors \
-    intel-media-driver
-
-# network
-pacman -S --noconfirm libmtp nss-mdns samba smbclient networkmanager firewalld udiskie udisks2
-
-# accessibility
-pacman -S --noconfirm espeak-ng orca
-
-# pipewire
-pacman -S --noconfirm pipewire pipewire-pulse pipewire-zeroconf pipewire-ffado pipewire-libcamera sof-firmware wireplumber \
-    alsa-firmware lib32-pipewire pipewire-audio linux-firmware-intel
-
-# printer
-pacman -S --noconfirm cups cups-browsed hplip
+pacman -S --noconfirm \
+    bash \
+    bash-completion \
+    cliphist \
+    curl \
+    debugedit \
+    distrobox \
+    docker \
+    fakeroot \
+    fastfetch \
+    foot \
+    gcc \
+    git \
+    glibc-locales \
+    go \
+    jq \
+    less \
+    lsof \
+    make \
+    man-db \
+    nano \
+    openssh \
+    patchelf \
+    podman \
+    powertop \
+    python3 \
+    sudo \
+    sysprof \
+    tar \
+    tree \
+    tuned \
+    tuned-ppd \
+    udev \
+    unzip \
+    usbutils \
+    vim \
+    wget \
+    wl-clip-persist \
+    yt-dlp
 
 # filesystems
-pacman -S --noconfirm gpart exfatprogs f2fs-tools jfsutils mtools nilfs-utils ntfs-3g udftools
+pacman -S --noconfirm \
+    exfatprogs \
+    f2fs-tools \
+    gpart \
+    gparted \
+    jfsutils \
+    mtools \
+    nilfs-utils \
+    ntfs-3g \
+    udftools
+
+# drivers
+pacman -S --noconfirm \
+    acpid \
+    amd-ucode \
+    apparmor \
+    ddcutil \
+    efibootmgr \
+    iio-sensor-proxy \
+    intel-media-driver \
+    intel-ucode \
+    lib32-vulkan-radeon \
+    libva-intel-driver \
+    libva-mesa-driver \
+    lm_sensors \
+    mesa \
+    mesa-utils \
+    shim \
+    vpl-gpu-rt \
+    vulkan-icd-loader \
+    vulkan-intel \
+    vulkan-radeon \
+    xf86-video-amdgpu \
+    zram-generator
+
+# pipewire
+pacman -S --noconfirm \
+    alsa-firmware \
+    lib32-pipewire \
+    linux-firmware-intel \
+    pipewire \
+    pipewire-audio \
+    pipewire-ffado \
+    pipewire-libcamera \
+    pipewire-pulse \
+    pipewire-zeroconf \
+    sof-firmware \
+    wireplumber
+
+# network
+pacman -S --noconfirm \
+    firewalld \
+    libmtp \
+    networkmanager \
+    nss-mdns \
+    samba \
+    smbclient \
+    udiskie \
+    udisks2
+
+# bluetooth
+pacman -S --noconfirm \
+    bluez \
+    bluez-utils
+
+# containerization
+pacman -S --noconfirm \
+    distrobox \
+    docker \
+    podman
+
+# media
+pacman -S --noconfirm \
+    ffmpeg \
+    ffmpegthumbs \
+    gst-libav \
+    gst-plugins-bad \
+    gst-plugins-base \
+    gst-plugins-good \
+    gst-plugins-ugly \
+    libglvnd \
+    librsvg \
+    playerctl \
+    plymouth \
+    wayland-utils \
+    xwayland-satellite
+
+# fonts
+pacman -S --noconfirm \
+    gnu-free-fonts \
+    gsfonts \
+    noto-fonts \
+    noto-fonts-cjk \
+    noto-fonts-emoji \
+    noto-fonts-extra \
+    otf-font-awesome \
+    otf-monaspace \
+    ttf-arphic-uming \
+    ttf-baekmuk \
+    ttf-croscore \
+    ttf-dejavu \
+    ttf-droid \
+    ttf-fira-code \
+    ttf-firacode-nerd \
+    ttf-ibm-plex \
+    ttf-nerd-fonts-symbols \
+    ttf-nerd-fonts-symbols-common \
+    ttf-nerd-fonts-symbols-mono \
+    unicode-emoji \
+    wqy-microhei
 
 # interface
-pacman -S --noconfirm greetd niri xdg-desktop-portal xdg-user-dirs xdg-desktop-portal-gnome ffmpegthumbs \
-    accountsservice dgop cava brightnessctl ddcutil xdg-utils shared-mime-info glycin papirus-icon-theme \
-    archlinux-xdg-menu
+pacman -S --noconfirm \
+    accountsservice \
+    archlinux-xdg-menu \
+    brightnessctl \
+    cava \
+    dgop \
+    evolution-data-server \
+    glycin \
+    greetd \
+    niri \
+    papirus-icon-theme \
+    polkit-gnome \
+    quickshell \
+    shared-mime-info \
+    wlsunset \
+    xdg-desktop-portal \
+    xdg-desktop-portal-gnome \
+    xdg-user-dirs \
+    xdg-utils
+
+# accessibility
+pacman -S --noconfirm \
+    espeak-ng \
+    orca
+
+# printer
+pacman -S --noconfirm \
+    cups \
+    cups-browsed \
+    hplip
 
 # apps
 # IMPORTANT: keep an eye on https://github.com/andyholmes/valent, extremely viable alternative to KDE Connect
-pacman -S --noconfirm nautilus papers loupe ark mission-center gnome-text-editor gnome-calendar frameworkintegration zed \
-    kdeconnect gnome-disk-utility gparted gnome-calculator showtime gnome-music gnome-weather impression decibels secrets \
-    sysprof
+pacman -S --noconfirm \
+    ark \
+    decibels \
+    frameworkintegration \
+    gnome-calculator \
+    gnome-calendar \
+    gnome-disk-utility \
+    gnome-music \
+    gnome-text-editor \
+    gnome-weather \
+    gpu-screen-recorder \
+    impression \
+    kdeconnect \
+    loupe \
+    mission-center \
+    nautilus \
+    papers \
+    scx-manager \
+    scx-scheds \
+    secrets \
+    showtime \
+    zed
 
 echo "::endgroup::"

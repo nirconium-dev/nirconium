@@ -16,16 +16,28 @@ echo -e '[chaotic-aur]\nInclude = /etc/pacman.d/chaotic-mirrorlist' >> /etc/pacm
 
 # setup Heck's bootc repo
 pacman-key --recv-key 5DE6BF3EBC86402E7A5C5D241FA48C960F9604CB --keyserver keyserver.ubuntu.com
-pacman-key --lsign-key 5DE6BF3EBC86402E7A5C5D241FA48C960F9604CB
+pacman-key --lsign-key 5DE6BF3EBC86402E7A5C5D241FA48C9604CB
 echo -e '[bootc]\nSigLevel = Required\nServer=https://github.com/hecknt/arch-bootc-pkgs/releases/download/$repo' >> /etc/pacman.conf
 
 pacman -Sy --noconfirm
 
 # install Chaotic AUR / bootc packages
 pacman -S --noconfirm \
-    chaotic-aur/flatpak-git chaotic-aur/obs-studio-stable chaotic-aur/obs-vkcapture-git chaotic-aur/distroshelf chaotic-aur/zen-browser-bin \
-    chaotic-aur/ttf-symbola chaotic-aur/opentabletdriver chaotic-aur/qt6ct-kde chaotic-aur/ttf-twemoji chaotic-aur/noctalia-shell chaotic-aur/bootc \
-    chaotic-aur/bibata-cursor-theme chaotic-aur/bazaar-git chaotic-aur/gearlever chaotic-aur/ttf-material-symbols-variable-git bootc/uupd
+    bootc/uupd \
+    chaotic-aur/bazaar-git \
+    chaotic-aur/bibata-cursor-theme \
+    chaotic-aur/bootc \
+    chaotic-aur/distroshelf \
+    chaotic-aur/flatpak-git \
+    chaotic-aur/gearlever \
+    chaotic-aur/matugen-git \
+    chaotic-aur/noctalia-shell \
+    chaotic-aur/opentabletdriver \
+    chaotic-aur/qt6ct-kde \
+    chaotic-aur/ttf-material-symbols-variable-git \
+    chaotic-aur/ttf-symbola \
+    chaotic-aur/ttf-twemoji \
+    chaotic-aur/zen-browser-bin
 
 ### normal AUR (AUR packages not packaged in Chaotic AUR)
 
@@ -43,7 +55,11 @@ su - builder -c "git clone https://aur.archlinux.org/yay.git ~/yay && \
 set +oue pipefail
 
 # install aur pkgs
-su - builder -c "yay -S --noconfirm hypryou-greeter warehouse-git oh-my-posh iio-niri"
+su - builder -c "yay -S --noconfirm \
+    hypryou-greeter \
+    iio-niri \
+    oh-my-posh \
+    warehouse-git"
 
 # cleanup
 rm /etc/sudoers.d/10-installer
