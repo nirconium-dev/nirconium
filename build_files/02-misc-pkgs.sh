@@ -43,7 +43,7 @@ su - builder -c "git clone https://aur.archlinux.org/yay.git ~/yay && \
 set +oue pipefail
 
 # install aur pkgs
-su - builder -c "yay -S --noconfirm hypryou-greeter warehouse-git oh-my-posh python-ignis-git ignis-gvc matugen-bin iio-niri"
+su - builder -c "yay -S --noconfirm warehouse-git oh-my-posh python-ignis-git ignis-gvc matugen-bin iio-niri"
 
 # cleanup
 rm /etc/sudoers.d/10-installer
