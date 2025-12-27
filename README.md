@@ -40,6 +40,8 @@ Absolutely! Although we've worked to provide good defaults OOTB, you can still c
 
 - CachyOS-v3 kernel with v3 cpu optimizations and the Bore scheduler
 
+- The default GNOME app suite for all your basic needs (including OBS for recording stuffs)
+
 - Foot terminal for a blazing-fast TUI experience along with Oh-My-Posh for looks
 
 - Flatpak/AppImage support OOTB with Bazaar/Warehouse (software store, flatpak manager) and Gear Lever (AppImage manager)
