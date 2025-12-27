@@ -27,13 +27,9 @@ systemctl --global enable \
     foot.service \
     opentabletdriver.service \
     flathub-user.service \
-    chezmoi-init.service \
-    chezmoi-update.timer
     
 # user-preset
-systemctl preset --global chezmoi-init \
-    chezmoi-update \
-    foot \
+systemctl preset --global foot \
     udiskie
 
 echo "::endgroup::"

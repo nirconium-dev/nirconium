@@ -24,7 +24,7 @@ pacman -Sy --noconfirm
 # install Chaotic AUR / bootc packages
 pacman -S --noconfirm \
     chaotic-aur/flatpak-git chaotic-aur/obs-studio-stable chaotic-aur/obs-vkcapture-git chaotic-aur/distroshelf chaotic-aur/zen-browser-bin \
-    chaotic-aur/ttf-symbola chaotic-aur/opentabletdriver chaotic-aur/qt6ct-kde chaotic-aur/ttf-twemoji chaotic-aur/darkly-qt6-git chaotic-aur/bootc \
+    chaotic-aur/ttf-symbola chaotic-aur/opentabletdriver chaotic-aur/qt6ct-kde chaotic-aur/ttf-twemoji chaotic-aur/noctalia-shell chaotic-aur/bootc \
     chaotic-aur/bibata-cursor-theme chaotic-aur/bazaar-git chaotic-aur/gearlever chaotic-aur/ttf-material-symbols-variable-git bootc/uupd
 
 ### normal AUR (AUR packages not packaged in Chaotic AUR)
@@ -43,7 +43,7 @@ su - builder -c "git clone https://aur.archlinux.org/yay.git ~/yay && \
 set +oue pipefail
 
 # install aur pkgs
-su - builder -c "yay -S --noconfirm hypryou-greeter warehouse-git oh-my-posh python-ignis-git ignis-gvc matugen-bin iio-niri"
+su - builder -c "yay -S --noconfirm hypryou-greeter warehouse-git oh-my-posh iio-niri"
 
 # cleanup
 rm /etc/sudoers.d/10-installer

@@ -50,7 +50,7 @@ pacman -S --noconfirm gpart exfatprogs f2fs-tools jfsutils mtools nilfs-utils nt
 # interface
 pacman -S --noconfirm greetd niri xdg-desktop-portal xdg-user-dirs xdg-desktop-portal-gnome ffmpegthumbs \
     accountsservice dgop cava brightnessctl ddcutil xdg-utils shared-mime-info glycin papirus-icon-theme \
-    archlinux-xdg-menu swww gnome-bluetooth-3.0 adw-gtk-theme dart-sass
+    archlinux-xdg-menu
 
 # apps
 # IMPORTANT: keep an eye on https://github.com/andyholmes/valent, extremely viable alternative to KDE Connect
