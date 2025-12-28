@@ -27,17 +27,21 @@ systemctl --global enable \
     foot.service \
     opentabletdriver.service \
     flathub-user.service \
-    noctalia-shell.service
+    noctalia-shell.service \
+    chezmoi-init.service \
+    chezmoi-update.timer
     
 # user-preset
-systemctl preset --global foot \
+systemctl preset --global foot-server \
     udiskie \
     flathub-user \
+    chezmoi-init \
+    chezmoi-update
 
-# user-wants
+# user-wants for Niri
 systemctl add-wants --global niri.service \
     noctalia-shell.service \
     udiskie.service \
-    foot.service
+    foot-server.service
 
 echo "::endgroup::"

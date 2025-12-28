@@ -1,5 +1,5 @@
 [Unit]
-Description=Desktop Shell Service
+Description=Noctalia Shell Service
 PartOf=graphical-session.target
 Requisite=graphical-session.target
 After=graphical-session.target

@@ -9,6 +9,7 @@ set -ouex pipefail
 pacman -S --noconfirm \
     bash \
     bash-completion \
+    chezmoi \
     cliphist \
     curl \
     debugedit \
@@ -129,6 +130,7 @@ pacman -S --noconfirm \
     gst-plugins-ugly \
     libglvnd \
     librsvg \
+    mpv-mpris \
     playerctl \
     plymouth \
     wayland-utils \

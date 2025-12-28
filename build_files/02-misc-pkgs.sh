@@ -34,7 +34,6 @@ pacman -S --noconfirm \
     chaotic-aur/noctalia-shell \
     chaotic-aur/opentabletdriver \
     chaotic-aur/qt6ct-kde \
-    chaotic-aur/ttf-material-symbols-variable-git \
     chaotic-aur/ttf-symbola \
     chaotic-aur/ttf-twemoji \
     chaotic-aur/zen-browser-bin
@@ -59,7 +58,8 @@ su - builder -c "yay -S --noconfirm \
     hypryou-greeter \
     iio-niri \
     oh-my-posh \
-    warehouse-git"
+    warehouse-git \
+    maplemono"
 
 # cleanup
 rm /etc/sudoers.d/10-installer

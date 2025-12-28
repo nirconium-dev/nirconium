@@ -30,8 +30,13 @@ fc-cache --force --really-force --system-only --verbose
 # setup oh-my-posh prompt
 echo 'eval "$(oh-my-posh init bash)"' >> /etc/bash.bashrc
 
-# make firacode-nerd default Foot font
-sed -i 's/^# font=monospace:size=11/font=FiraCode Nerd Font:size=11/' /etc/xdg/foot/foot.ini
+# install Cherries
+git clone "https://github.com/tartaria-dev/cherries.git" /usr/share/tartaria/cherries
+install -d /etc/niri/
+cp -f /usr/share/zirconium/zdots/dot_config/niri/config.kdl /etc/niri/config.kdl
+
+# make Maple Mono default Foot font
+sed -i 's/^# font=monospace:size=11/font=Maple Mono:size=11/' /etc/xdg/foot/foot.ini
 
 # fix Foot terminal not using login-shell
 sed -i 's/^# login-shell=no/login-shell=yes/' /etc/xdg/foot/foot.ini
