@@ -33,7 +33,7 @@ echo 'eval "$(oh-my-posh init bash)"' >> /etc/bash.bashrc
 # install Cherries
 git clone "https://github.com/tartaria-dev/cherries.git" /usr/share/tartaria/cherries
 install -d /etc/niri/
-cp -f /usr/share/zirconium/zdots/dot_config/niri/config.kdl /etc/niri/config.kdl
+cp -f /usr/share/tartaria/cherries/dot_config/niri/config.kdl /etc/niri/config.kdl
 
 # make Maple Mono default Foot font
 sed -i 's/^# font=monospace:size=11/font=Maple Mono:size=11/' /etc/xdg/foot/foot.ini
