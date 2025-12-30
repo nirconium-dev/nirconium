@@ -8,7 +8,7 @@ cursor_theme_name = "Bibata-Original-Ice"
 cursor_blink = true
 font_name = "Maple Mono 16"
 icon_theme_name = "Papirus-Dark"
-theme_name = "Orchis-Teal-Dark"
+theme_name = "Orchis-Dark"
 
 [commands]
 reboot = ["systemctl", "reboot"]
