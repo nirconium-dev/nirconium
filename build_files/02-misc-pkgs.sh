@@ -58,7 +58,7 @@ su - builder -c "yay -S --noconfirm \
     iio-niri \
     oh-my-posh \
     warehouse-git \
-    maplemono"
+    maplemono-otf"
 
 # cleanup
 rm /etc/sudoers.d/10-installer
