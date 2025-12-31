@@ -39,8 +39,18 @@ sed -i 's/^# font=monospace:size=11/font=Maple Mono:size=11/' /etc/xdg/foot/foot
 sed -i 's/^# login-shell=no/login-shell=yes/' /etc/xdg/foot/foot.ini
 
 # set up environment variables
-echo -e "\nQT_QPA_PLATFORM=\"wayland;xcb\"\nQT_WAYLAND_DISABLE_WINDOWDECORATION=1\nQT_AUTO_SCREEN_SCALE_FACTOR=1\nQT_QPA_PLATFORMTHEME=qt6ct\n\nMOZ_ENABLE_WAYLAND=1\nGDK_SCALE=1\nSDL_VIDEODRIVER=wayland\n\nELECTRON_ENABLE_WAYLAND=1\nELECTRON_OZONE_PLATFORM_HINT=wayland" >> /etc/environment
+echo -e "
+QT_QPA_PLATFORM=\"wayland;xcb\"
+QT_WAYLAND_DISABLE_WINDOWDECORATION=\"1\"
+QT_AUTO_SCREEN_SCALE_FACTOR=\"1\"
+QT_QPA_PLATFORMTHEME=\"qt6ct\"
 
+MOZ_ENABLE_WAYLAND=\"1\"
+GDK_SCALE=\"1\"
+SDL_VIDEODRIVER=\"wayland\"
+
+ELECTRON_ENABLE_WAYLAND=\"1\"
+ELECTRON_OZONE_PLATFORM_HINT=\"wayland\"" >> /etc/environment
 # apply bootscreen logo
 cp -f /usr/share/tartaria/pixmaps/watermark.png /usr/share/plymouth/themes/spinner/watermark.png
 
