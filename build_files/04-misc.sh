@@ -52,6 +52,9 @@ SDL_VIDEODRIVER=\"wayland\"
 ELECTRON_ENABLE_WAYLAND=\"1\"
 ELECTRON_OZONE_PLATFORM_HINT=\"wayland\"" >> /etc/environment
 
+# apply new schemas
+glib-compile-schemas /usr/share/glib-2.0/schemas
+
 # apply bootscreen logo
 cp -f /usr/share/tartaria/pixmaps/watermark.png /usr/share/plymouth/themes/spinner/watermark.png
 
