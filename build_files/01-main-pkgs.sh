@@ -157,6 +157,7 @@ pacman -S --noconfirm \
     ttf-nerd-fonts-symbols \
     ttf-nerd-fonts-symbols-common \
     ttf-nerd-fonts-symbols-mono \
+    inter-font \
     unicode-emoji \
     wqy-microhei
 
