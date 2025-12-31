@@ -51,6 +51,7 @@ SDL_VIDEODRIVER=\"wayland\"
 
 ELECTRON_ENABLE_WAYLAND=\"1\"
 ELECTRON_OZONE_PLATFORM_HINT=\"wayland\"" >> /etc/environment
+
 # apply bootscreen logo
 cp -f /usr/share/tartaria/pixmaps/watermark.png /usr/share/plymouth/themes/spinner/watermark.png
 
