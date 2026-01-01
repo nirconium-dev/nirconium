@@ -1,0 +1,28 @@
+[Default Applications]
+text/plain=org.gnome.TextEditor.desktop
+application/json=org.gnome.TextEditor.desktop
+
+text/html=zen.desktop
+x-scheme-handler/http=zen.desktop
+x-scheme-handler/https=zen.desktop
+
+video/mp4=org.gnome.Showtime.desktop
+video/x-matroska=org.gnome.Showtime.desktop
+video/webm=org.gnome.Showtime.desktop
+video/quicktime=org.gnome.Showtime.desktop
+
+audio/mpeg=org.gnome.Decibels.desktop
+audio/flac=org.gnome.Decibels.desktop
+audio/ogg=org.gnome.Decibels.desktop
+audio/wav=org.gnome.Decibels.desktop
+
+image/png=org.gnome.Loupe.desktop
+image/jpeg=org.gnome.Loupe.desktop
+image/webp=org.gnome.Loupe.desktop
+image/gif=org.gnome.Loupe.desktop
+
+application/zip=org.kde.ark.desktop
+application/x-rar=org.kde.ark.desktop
+application/x-tar=org.kde.ark.desktop
+
+[Added Associations]
